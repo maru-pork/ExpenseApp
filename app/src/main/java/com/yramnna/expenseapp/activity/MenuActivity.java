@@ -5,8 +5,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.yramnna.expenseapp.R;
-import com.yramnna.expenseapp.util.CardModel;
-import com.yramnna.expenseapp.util.MenuAdapter;
+import com.yramnna.expenseapp.core.CardModel;
+import com.yramnna.expenseapp.core.MenuAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +50,7 @@ public class MenuActivity extends BaseActivity {
         cardModels.add(new CardModel("Emergency Fund Manager", "Status of Emergency Fund", R.drawable.ic_closed_caption_black_24dp));
         cardModels.add(new CardModel("Investment Manager", "Tracking of investments", R.drawable.ic_closed_caption_black_24dp));
         cardModels.add(new CardModel("Grocery Item Manager", "List of monthly grocery items", R.drawable.ic_closed_caption_black_24dp));
-        cardModels.add(new CardModel("Financial Goals Manager", "On-hand financial goals", R.drawable.ic_closed_caption_black_24dp));
+        cardModels.add(new CardModel("Financial Challenge Manager", "On-hand financial goals", R.drawable.ic_closed_caption_black_24dp));
         cardModels.add(new CardModel("Excel", "Download to Excel", R.drawable.ic_closed_caption_black_24dp));
         return cardModels;
     }

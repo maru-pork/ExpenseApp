@@ -1,4 +1,4 @@
-package com.yramnna.expenseapp.util;
+package com.yramnna.expenseapp.core;
 
 /**
  * Created by Rufo on 8/3/2016.

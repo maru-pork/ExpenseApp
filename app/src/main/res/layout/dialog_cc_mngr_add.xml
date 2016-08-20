@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:stretchColumns="1">
+
+        <!--Transaction Date -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_tranDate" />
+            <EditText
+                android:id="@+id/et_cc_tranDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAlignment="textStart"/>
+        </TableRow>
+
+        <!--Transaction Type -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_tranType" />
+            <Spinner
+                android:id="@+id/sp_cc_tranType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:entries="@array/arr_cc_transaction"
+                />
+        </TableRow>
+
+        <!-- Description -->
+        <TableRow
+            android:id="@+id/tr_cc_tranDesc">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_tranDescription" />
+            <EditText
+                android:id="@+id/et_cc_tranDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAlignment="textStart" />
+        </TableRow>
+
+        <!-- Payment Type -->
+        <TableRow
+            android:id="@+id/tr_cc_paymentType"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_payment_type"/>
+            <Spinner
+                android:id="@+id/sp_cc_paymentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:entries="@array/arr_cc_payment"/>
+        </TableRow>
+
+        <!-- Amount -->
+        <TableRow
+            android:id="@+id/tr_cc_tranAmount">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_tranAmount"
+                />
+            <EditText
+                android:id="@+id/et_cc_TranAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:textAlignment="textStart" />
+        </TableRow>
+
+        <!-- Principal Amount -->
+        <TableRow
+            android:id="@+id/tr_cc_principalAmount"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_principal_amount"/>
+            <EditText
+                android:id="@+id/et_cc_principalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:textAlignment="textStart" />
+        </TableRow>
+
+        <!-- Monthly Amortization -->
+        <TableRow
+            android:id="@+id/tr_cc_monthlyAmortization"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_monthly_amortization"/>
+            <EditText
+                android:id="@+id/et_cc_monthlyAmortization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:textAlignment="textStart" />
+        </TableRow>
+
+        <!-- Number of Months To Pay -->
+        <TableRow
+            android:id="@+id/tr_cc_monthsToPay"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_months_to_pay"/>
+            <EditText
+                android:id="@+id/et_cc_monthsToPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:inputType="number"
+                android:textAlignment="textStart" />
+        </TableRow>
+
+        <!-- Until -->
+        <TableRow
+            android:id="@+id/tr_cc_until"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_until"/>
+            <EditText
+                android:id="@+id/et_cc_until"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAlignment="textStart"
+                android:enabled="false" />
+        </TableRow>
+
+        <!-- Includes Monthly Amortization-->
+        <TableRow
+            android:id="@+id/tr_cc_include"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_include"/>
+            <ListView
+                android:id="@+id/lv_cc_installments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <!-- Action Button -->
+        <TableRow>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_cc_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:onClick="handleCancel"/>
+                <Button
+                    android:id="@+id/btn_cc_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_cc_add"
+                    android:onClick="addTransaction"/>
+            </LinearLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>

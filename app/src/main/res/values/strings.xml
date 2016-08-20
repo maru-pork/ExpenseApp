@@ -5,9 +5,42 @@
 
     <string name="prompt_passCode">Enter PassCode</string>
     <string name="action_enter">Enter</string>
-    <string name="action_enter_short">Enter</string>
+    <string name="action_enter_short">Enter PassCode</string>
 
     <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_cc_manager">Credit Card Manager</string>
 
+    <string name="cancel">Cancel</string>
+
+    <!--Credit Card Manager-->
+    <string name="prompt_cc_tranDate">Transaction Date</string>
+    <string name="prompt_cc_tranType">Transaction Type</string>
+    <string name="prompt_cc_tranDescription">Description</string>
+    <string name="prompt_cc_tranAmount">Amount</string>
+    <string name="prompt_cc_principal_amount">Principal Amount</string>
+    <string name="prompt_cc_monthly_amortization">Monthly Amortization</string>
+    <string name="prompt_cc_months_to_pay">Months To Pay</string>
+    <string name="prompt_cc_until">Until</string>
+    <string name="prompt_cc_payment_type">Payment Type</string>
+    <string name="prompt_cc_include">Include?</string>
+    <string name="btn_cc_add">Add</string>
+    <string name="title_add_transaction">Add Transaction</string>
+
+    <string-array name="arr_cc_transaction">
+        <item>CREDIT</item>
+        <item>INSTALLMENT</item>
+        <item>CHARGE</item>
+        <item>PAYMENT</item>
+    </string-array>
+
+    <string-array name="arr_cc_payment">
+        <item>CBC_Internet_Payment</item>
+        <item>SM_Bills_Payment</item>
+        <item>ChinaBank</item>
+        <item>Others</item>
+    </string-array>
+
+
+    <!-- http://www.mysamplecode.com/2012/07/android-listview-checkbox-example.html -->
 
 </resources>

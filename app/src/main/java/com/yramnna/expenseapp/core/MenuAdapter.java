@@ -1,6 +1,7 @@
-package com.yramnna.expenseapp.util;
+package com.yramnna.expenseapp.core;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yramnna.expenseapp.R;
+import com.yramnna.expenseapp.activity.CreditCardManagerActivity;
+import com.yramnna.expenseapp.activity.MenuActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,12 +83,37 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.CardViewHolder
 
         switch (i) {
             case 0:
+                cardViewHolder.cv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // TODO
+                    }
+                });
                 break;
             case 1:
+                cardViewHolder.cv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(context, CreditCardManagerActivity.class);
+                        context.startActivity(intent);
+                    }
+                });
                 break;
             case 2:
+                cardViewHolder.cv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // TODO
+                    }
+                });
                 break;
             case 3:
+                cardViewHolder.cv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // TODO
+                    }
+                });
                 break;
         }
     }
