@@ -25,7 +25,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textAlignment="textStart"/>
+                android:textAlignment="textStart"
+                android:onClick="displayCalendar" />
         </TableRow>
 
         <!--Transaction Type -->
@@ -40,8 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:entries="@array/arr_cc_transaction"
-                />
+                android:entries="@array/arr_cc_transaction" />
         </TableRow>
 
         <!-- Description -->
@@ -52,12 +52,12 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold|italic"
                 android:text="@string/prompt_cc_tranDescription" />
-            <EditText
-                android:id="@+id/et_cc_tranDesc"
+            <AutoCompleteTextView
+                android:id="@+id/at_cc_tranDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"/>
         </TableRow>
 
         <!-- Payment Type -->
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:inputType="numberDecimal"
-                android:textAlignment="textStart" />
+                android:textAlignment="textEnd" />
         </TableRow>
 
         <!-- Principal Amount -->
@@ -110,25 +110,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:inputType="numberDecimal"
-                android:textAlignment="textStart" />
-        </TableRow>
-
-        <!-- Monthly Amortization -->
-        <TableRow
-            android:id="@+id/tr_cc_monthlyAmortization"
-            android:visibility="gone">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold|italic"
-                android:text="@string/prompt_cc_monthly_amortization"/>
-            <EditText
-                android:id="@+id/et_cc_monthlyAmortization"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:inputType="numberDecimal"
-                android:textAlignment="textStart" />
+                android:textAlignment="textEnd" />
         </TableRow>
 
         <!-- Number of Months To Pay -->
@@ -146,7 +128,28 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:inputType="number"
-                android:textAlignment="textStart" />
+                android:textAlignment="textEnd"
+                android:imeActionId="@+id/compute"
+                android:imeActionLabel="@string/action_compute"
+                android:imeOptions="actionUnspecified" />
+        </TableRow>
+
+        <!-- Monthly Amortization -->
+        <TableRow
+            android:id="@+id/tr_cc_monthlyAmortization"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/prompt_cc_monthly_amortization"/>
+            <EditText
+                android:id="@+id/et_cc_monthlyAmortization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:enabled="false"
+                android:textAlignment="textEnd"/>
         </TableRow>
 
         <!-- Until -->
@@ -163,7 +166,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textAlignment="textStart"
                 android:enabled="false" />
         </TableRow>
 

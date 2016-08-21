@@ -6,11 +6,13 @@
     <string name="prompt_passCode">Enter PassCode</string>
     <string name="action_enter">Enter</string>
     <string name="action_enter_short">Enter PassCode</string>
+    <string name="action_compute">Compute</string>
 
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_cc_manager">Credit Card Manager</string>
 
     <string name="cancel">Cancel</string>
+    <string name="date_format">MMMM dd, yyyy</string>
 
     <!--Credit Card Manager-->
     <string name="prompt_cc_tranDate">Transaction Date</string>
@@ -40,7 +42,16 @@
         <item>Others</item>
     </string-array>
 
+    <string-array name="arr_cc_desc">
+        <item>Grocery - Eton</item>
+        <item>Grocery - Ever</item>
+        <item>Mercury Drug - Trinoma</item>
+        <item>Mercury Drug - Ayala</item>
+        <item>Mercury Drug - G4</item>
+    </string-array>
 
     <!-- http://www.mysamplecode.com/2012/07/android-listview-checkbox-example.html -->
+    <!--http://stackoverflow.com/questions/31052436/android-edittext-with-drop-down-list-->
+    <!--http://www.sourcecodester.com/android/9474/dynamic-table-w-pagination.html-->
 
 </resources>
